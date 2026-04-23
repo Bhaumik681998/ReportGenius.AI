@@ -1,0 +1,6 @@
+@ReportGenius.AI_HostAddress = http://localhost:5031
+
+GET {{ReportGenius.AI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
