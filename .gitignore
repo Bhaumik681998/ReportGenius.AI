@@ -1,0 +1,97 @@
+## ----------------------------
+## .NET / Visual Studio optimized
+## ----------------------------
+
+# Build results
+bin/
+obj/
+[Bb]uild/
+[Bb]uild[Ll]og.*
+*.dll
+*.exe
+*.pdb
+*.apphost.exe
+*.dll.config
+*.exe.config
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.rsuser
+*.vscode/
+*.vshistory/
+*.sln.docstates
+*.vspscc
+*.vssscc
+*.futdcahe.v2
+*.vsidx
+
+# Rider / JetBrains
+.idea/
+*.sln.iml
+_ReSharper*/
+*.DotSettings.user
+
+# NuGet
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+.project.assets.json
+project.lock.json
+project.paket.cache
+paket-files/
+paket-out/
+paket-dependencies/
+
+# Test Results
+[Tt]est[Rr]esult*/
+*.trx
+*.coverage
+*.coveragexml
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Azure / publish
+*.pubxml
+*.publishproj
+PublishScripts/
+*.azurePubxml
+
+# Logs
+*.log
+*.tlog
+MSBuild_Logs/
+*.binlog
+[Ll]og/
+[Ll]ogs/
+
+# Local DB / cache
+*.mdf
+*.ldf
+*.ndf
+*.dbmdl
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Backup / temp files
+~$*
+*~
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Certificates / others
+*.pfx
+*.publishsettings
+.orleans.codegen.cs
