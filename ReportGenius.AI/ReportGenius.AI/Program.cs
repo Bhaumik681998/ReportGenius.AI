@@ -1,3 +1,5 @@
+using ReportGenius.AI.Service;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +8,13 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+#region :: ::
+builder.Services.AddHttpClient<GeminiService>();
+builder.Services.AddScoped<DataService>();
+builder.Services.AddScoped<SqlSafetyService>();
+builder.Services.AddScoped<SchemaService>();
+#endregion
 
 var app = builder.Build();
 
