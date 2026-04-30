@@ -6,14 +6,10 @@
 
     public class DataService
     {
-        public async Task<string> ExecuteQueryAsync(string connStr, string sql)
+        public async Task<IEnumerable<dynamic>> ExecuteQueryAsync(string conn, string sql)
         {
-            using var conn = new SqlConnection(connStr);
-            await conn.OpenAsync();
-
-            var result = await conn.QueryAsync(sql);
-
-            return JsonSerializer.Serialize(result);
+            using var db = new SqlConnection(conn);
+            return await db.QueryAsync(sql);
         }
     }
 }

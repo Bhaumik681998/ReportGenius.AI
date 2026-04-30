@@ -2,7 +2,7 @@
 {
     public class ReportRequestDto
     {
-        public string? ConnectionString { get; set; }
+        //public string? ConnectionString { get; set; }
         public string? Prompt { get; set; }
 
         //public DateTime From { get; set; }

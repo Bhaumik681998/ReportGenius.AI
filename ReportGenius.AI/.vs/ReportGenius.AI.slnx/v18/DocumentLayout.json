@@ -3,32 +3,40 @@
   "WorkspaceRootPath": "D:\\Macrosoft\\ReportGenius\\ReportGenius.AI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A1776247-47E1-7D2A-209C-9DDA83590C7C}|ReportGenius.AI\\ReportGenius.AI.csproj|d:\\macrosoft\\reportgenius\\reportgenius.ai\\reportgenius.ai\\model\\reportresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1776247-47E1-7D2A-209C-9DDA83590C7C}|ReportGenius.AI\\ReportGenius.AI.csproj|solutionrelative:reportgenius.ai\\model\\reportresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A1776247-47E1-7D2A-209C-9DDA83590C7C}|ReportGenius.AI\\ReportGenius.AI.csproj|d:\\macrosoft\\reportgenius\\reportgenius.ai\\reportgenius.ai\\controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A1776247-47E1-7D2A-209C-9DDA83590C7C}|ReportGenius.AI\\ReportGenius.AI.csproj|solutionrelative:reportgenius.ai\\controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1776247-47E1-7D2A-209C-9DDA83590C7C}|ReportGenius.AI\\ReportGenius.AI.csproj|d:\\macrosoft\\reportgenius\\reportgenius.ai\\reportgenius.ai\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1776247-47E1-7D2A-209C-9DDA83590C7C}|ReportGenius.AI\\ReportGenius.AI.csproj|solutionrelative:reportgenius.ai\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A1776247-47E1-7D2A-209C-9DDA83590C7C}|ReportGenius.AI\\ReportGenius.AI.csproj|d:\\macrosoft\\reportgenius\\reportgenius.ai\\reportgenius.ai\\dtos\\reportrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1776247-47E1-7D2A-209C-9DDA83590C7C}|ReportGenius.AI\\ReportGenius.AI.csproj|solutionrelative:reportgenius.ai\\dtos\\reportrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A1776247-47E1-7D2A-209C-9DDA83590C7C}|ReportGenius.AI\\ReportGenius.AI.csproj|d:\\macrosoft\\reportgenius\\reportgenius.ai\\reportgenius.ai\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A1776247-47E1-7D2A-209C-9DDA83590C7C}|ReportGenius.AI\\ReportGenius.AI.csproj|solutionrelative:reportgenius.ai\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1776247-47E1-7D2A-209C-9DDA83590C7C}|ReportGenius.AI\\ReportGenius.AI.csproj|d:\\macrosoft\\reportgenius\\reportgenius.ai\\reportgenius.ai\\service\\sqlsafetyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1776247-47E1-7D2A-209C-9DDA83590C7C}|ReportGenius.AI\\ReportGenius.AI.csproj|solutionrelative:reportgenius.ai\\service\\sqlsafetyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A1776247-47E1-7D2A-209C-9DDA83590C7C}|ReportGenius.AI\\ReportGenius.AI.csproj|d:\\macrosoft\\reportgenius\\reportgenius.ai\\reportgenius.ai\\service\\groqservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1776247-47E1-7D2A-209C-9DDA83590C7C}|ReportGenius.AI\\ReportGenius.AI.csproj|solutionrelative:reportgenius.ai\\service\\groqservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1776247-47E1-7D2A-209C-9DDA83590C7C}|ReportGenius.AI\\ReportGenius.AI.csproj|d:\\macrosoft\\reportgenius\\reportgenius.ai\\reportgenius.ai\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1776247-47E1-7D2A-209C-9DDA83590C7C}|ReportGenius.AI\\ReportGenius.AI.csproj|solutionrelative:reportgenius.ai\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1776247-47E1-7D2A-209C-9DDA83590C7C}|ReportGenius.AI\\ReportGenius.AI.csproj|d:\\macrosoft\\reportgenius\\reportgenius.ai\\reportgenius.ai\\service\\dataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1776247-47E1-7D2A-209C-9DDA83590C7C}|ReportGenius.AI\\ReportGenius.AI.csproj|solutionrelative:reportgenius.ai\\service\\dataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A1776247-47E1-7D2A-209C-9DDA83590C7C}|ReportGenius.AI\\ReportGenius.AI.csproj|d:\\macrosoft\\reportgenius\\reportgenius.ai\\reportgenius.ai\\service\\schemaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A1776247-47E1-7D2A-209C-9DDA83590C7C}|ReportGenius.AI\\ReportGenius.AI.csproj|solutionrelative:reportgenius.ai\\service\\schemaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1776247-47E1-7D2A-209C-9DDA83590C7C}|ReportGenius.AI\\ReportGenius.AI.csproj|d:\\macrosoft\\reportgenius\\reportgenius.ai\\reportgenius.ai\\service\\geminiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1776247-47E1-7D2A-209C-9DDA83590C7C}|ReportGenius.AI\\ReportGenius.AI.csproj|solutionrelative:reportgenius.ai\\service\\geminiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A1776247-47E1-7D2A-209C-9DDA83590C7C}|ReportGenius.AI\\ReportGenius.AI.csproj|d:\\macrosoft\\reportgenius\\reportgenius.ai\\reportgenius.ai\\service\\sqlvalidatorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1776247-47E1-7D2A-209C-9DDA83590C7C}|ReportGenius.AI\\ReportGenius.AI.csproj|solutionrelative:reportgenius.ai\\service\\sqlvalidatorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1776247-47E1-7D2A-209C-9DDA83590C7C}|ReportGenius.AI\\ReportGenius.AI.csproj|d:\\macrosoft\\reportgenius\\reportgenius.ai\\reportgenius.ai\\service\\sqlsafetyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1776247-47E1-7D2A-209C-9DDA83590C7C}|ReportGenius.AI\\ReportGenius.AI.csproj|solutionrelative:reportgenius.ai\\service\\sqlsafetyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,20 +46,125 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ReportController.cs",
+              "DocumentMoniker": "D:\\Macrosoft\\ReportGenius\\ReportGenius.AI\\ReportGenius.AI\\Controllers\\ReportController.cs",
+              "RelativeDocumentMoniker": "ReportGenius.AI\\Controllers\\ReportController.cs",
+              "ToolTip": "D:\\Macrosoft\\ReportGenius\\ReportGenius.AI\\ReportGenius.AI\\Controllers\\ReportController.cs",
+              "RelativeToolTip": "ReportGenius.AI\\Controllers\\ReportController.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAswDQAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T06:19:29.59Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "GroqService.cs",
+              "DocumentMoniker": "D:\\Macrosoft\\ReportGenius\\ReportGenius.AI\\ReportGenius.AI\\Service\\GroqService.cs",
+              "RelativeDocumentMoniker": "ReportGenius.AI\\Service\\GroqService.cs",
+              "ToolTip": "D:\\Macrosoft\\ReportGenius\\ReportGenius.AI\\ReportGenius.AI\\Service\\GroqService.cs",
+              "RelativeToolTip": "ReportGenius.AI\\Service\\GroqService.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAqwFkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T06:17:27.959Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DataService.cs",
+              "DocumentMoniker": "D:\\Macrosoft\\ReportGenius\\ReportGenius.AI\\ReportGenius.AI\\Service\\DataService.cs",
+              "RelativeDocumentMoniker": "ReportGenius.AI\\Service\\DataService.cs",
+              "ToolTip": "D:\\Macrosoft\\ReportGenius\\ReportGenius.AI\\ReportGenius.AI\\Service\\DataService.cs",
+              "RelativeToolTip": "ReportGenius.AI\\Service\\DataService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T06:20:52.535Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SchemaService.cs",
+              "DocumentMoniker": "D:\\Macrosoft\\ReportGenius\\ReportGenius.AI\\ReportGenius.AI\\Service\\SchemaService.cs",
+              "RelativeDocumentMoniker": "ReportGenius.AI\\Service\\SchemaService.cs",
+              "ToolTip": "D:\\Macrosoft\\ReportGenius\\ReportGenius.AI\\ReportGenius.AI\\Service\\SchemaService.cs",
+              "RelativeToolTip": "ReportGenius.AI\\Service\\SchemaService.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T06:21:08.035Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SqlSafetyService.cs",
+              "DocumentMoniker": "D:\\Macrosoft\\ReportGenius\\ReportGenius.AI\\ReportGenius.AI\\Service\\SqlSafetyService.cs",
+              "RelativeDocumentMoniker": "ReportGenius.AI\\Service\\SqlSafetyService.cs",
+              "ToolTip": "D:\\Macrosoft\\ReportGenius\\ReportGenius.AI\\ReportGenius.AI\\Service\\SqlSafetyService.cs",
+              "RelativeToolTip": "ReportGenius.AI\\Service\\SqlSafetyService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T06:21:30.072Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Macrosoft\\ReportGenius\\ReportGenius.AI\\ReportGenius.AI\\Program.cs",
+              "RelativeDocumentMoniker": "ReportGenius.AI\\Program.cs",
+              "ToolTip": "D:\\Macrosoft\\ReportGenius\\ReportGenius.AI\\ReportGenius.AI\\Program.cs",
+              "RelativeToolTip": "ReportGenius.AI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAiwBEAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T06:24:06.643Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SqlValidatorService.cs",
+              "DocumentMoniker": "D:\\Macrosoft\\ReportGenius\\ReportGenius.AI\\ReportGenius.AI\\Service\\SqlValidatorService.cs",
+              "RelativeDocumentMoniker": "ReportGenius.AI\\Service\\SqlValidatorService.cs",
+              "ToolTip": "D:\\Macrosoft\\ReportGenius\\ReportGenius.AI\\ReportGenius.AI\\Service\\SqlValidatorService.cs",
+              "RelativeToolTip": "ReportGenius.AI\\Service\\SqlValidatorService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T07:00:36.255Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Macrosoft\\ReportGenius\\ReportGenius.AI\\ReportGenius.AI\\appsettings.json",
               "RelativeDocumentMoniker": "ReportGenius.AI\\appsettings.json",
               "ToolTip": "D:\\Macrosoft\\ReportGenius\\ReportGenius.AI\\ReportGenius.AI\\appsettings.json",
               "RelativeToolTip": "ReportGenius.AI\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-24T04:41:26.661Z",
+              "WhenOpened": "2026-04-30T06:26:39.149Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ReportRequestDto.cs",
+              "DocumentMoniker": "D:\\Macrosoft\\ReportGenius\\ReportGenius.AI\\ReportGenius.AI\\DTOs\\ReportRequestDto.cs",
+              "RelativeDocumentMoniker": "ReportGenius.AI\\DTOs\\ReportRequestDto.cs",
+              "ToolTip": "D:\\Macrosoft\\ReportGenius\\ReportGenius.AI\\ReportGenius.AI\\DTOs\\ReportRequestDto.cs",
+              "RelativeToolTip": "ReportGenius.AI\\DTOs\\ReportRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T09:54:51.735Z",
               "EditorCaption": ""
             },
             {
@@ -73,84 +186,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ReportResult.cs",
-              "DocumentMoniker": "D:\\Macrosoft\\ReportGenius\\ReportGenius.AI\\ReportGenius.AI\\Model\\ReportResult.cs",
-              "RelativeDocumentMoniker": "ReportGenius.AI\\Model\\ReportResult.cs",
-              "ToolTip": "D:\\Macrosoft\\ReportGenius\\ReportGenius.AI\\ReportGenius.AI\\Model\\ReportResult.cs",
-              "RelativeToolTip": "ReportGenius.AI\\Model\\ReportResult.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAwwB0AAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-29T07:08:47.574Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Macrosoft\\ReportGenius\\ReportGenius.AI\\ReportGenius.AI\\Program.cs",
-              "RelativeDocumentMoniker": "ReportGenius.AI\\Program.cs",
-              "ToolTip": "D:\\Macrosoft\\ReportGenius\\ReportGenius.AI\\ReportGenius.AI\\Program.cs",
-              "RelativeToolTip": "ReportGenius.AI\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-29T07:07:38.319Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SqlSafetyService.cs",
-              "DocumentMoniker": "D:\\Macrosoft\\ReportGenius\\ReportGenius.AI\\ReportGenius.AI\\Service\\SqlSafetyService.cs",
-              "RelativeDocumentMoniker": "ReportGenius.AI\\Service\\SqlSafetyService.cs",
-              "ToolTip": "D:\\Macrosoft\\ReportGenius\\ReportGenius.AI\\ReportGenius.AI\\Service\\SqlSafetyService.cs",
-              "RelativeToolTip": "ReportGenius.AI\\Service\\SqlSafetyService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-29T07:07:10.948Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SchemaService.cs",
-              "DocumentMoniker": "D:\\Macrosoft\\ReportGenius\\ReportGenius.AI\\ReportGenius.AI\\Service\\SchemaService.cs",
-              "RelativeDocumentMoniker": "ReportGenius.AI\\Service\\SchemaService.cs",
-              "ToolTip": "D:\\Macrosoft\\ReportGenius\\ReportGenius.AI\\ReportGenius.AI\\Service\\SchemaService.cs",
-              "RelativeToolTip": "ReportGenius.AI\\Service\\SchemaService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-29T07:03:41.989Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ReportController.cs",
-              "DocumentMoniker": "D:\\Macrosoft\\ReportGenius\\ReportGenius.AI\\ReportGenius.AI\\Controllers\\ReportController.cs",
-              "RelativeDocumentMoniker": "ReportGenius.AI\\Controllers\\ReportController.cs",
-              "ToolTip": "D:\\Macrosoft\\ReportGenius\\ReportGenius.AI\\ReportGenius.AI\\Controllers\\ReportController.cs",
-              "RelativeToolTip": "ReportGenius.AI\\Controllers\\ReportController.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-29T05:26:23.296Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "GeminiService.cs",
-              "DocumentMoniker": "D:\\Macrosoft\\ReportGenius\\ReportGenius.AI\\ReportGenius.AI\\Service\\GeminiService.cs",
-              "RelativeDocumentMoniker": "ReportGenius.AI\\Service\\GeminiService.cs",
-              "ToolTip": "D:\\Macrosoft\\ReportGenius\\ReportGenius.AI\\ReportGenius.AI\\Service\\GeminiService.cs",
-              "RelativeToolTip": "ReportGenius.AI\\Service\\GeminiService.cs",
-              "ViewState": "AgIAAGgAAAAAAAAAAAAUwJIAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-29T05:25:35.228Z",
-              "EditorCaption": ""
             }
           ]
         }

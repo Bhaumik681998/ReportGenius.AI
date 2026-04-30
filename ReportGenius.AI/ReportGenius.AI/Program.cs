@@ -10,10 +10,14 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 #region :: ::
+builder.Services.AddHttpClient<GroqService>();
+
 builder.Services.AddHttpClient<GeminiService>();
 builder.Services.AddScoped<DataService>();
 builder.Services.AddScoped<SqlSafetyService>();
 builder.Services.AddScoped<SchemaService>();
+builder.Services.AddScoped<SqlValidatorService>();
+
 #endregion
 
 var app = builder.Build();

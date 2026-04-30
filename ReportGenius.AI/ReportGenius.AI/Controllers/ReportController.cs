@@ -13,66 +13,55 @@ namespace AIReport.Controllers
     {
         private readonly GeminiService _ai;
         private readonly DataService _data;
+        private readonly string _connectionString;
         private readonly SqlSafetyService _safety;
         private readonly SchemaService _schema;
-
+        private readonly GroqService _groqService;
+        private readonly SqlValidatorService _validator;
         public ReportController(
             GeminiService ai,
-            DataService data,
+            DataService data, IConfiguration config,
             SqlSafetyService safety,
-            SchemaService schema)
+            SchemaService schema,
+            GroqService groqService, SqlValidatorService validator)
         {
             _ai = ai;
             _data = data;
+            _connectionString = config["ConnectionStrings:DefaultConnection"];
             _safety = safety;
             _schema = schema;
+            _groqService = groqService;
+            _validator = validator;
         }
-
         [HttpPost("generate")]
-        public async Task<IActionResult> Generate([FromBody] ReportRequestDto request)
+        public async Task<IActionResult> Generate([FromBody] ReportRequestDto req)
         {
             try
             {
-                // 1. Get schema
-                var schema = await _schema.GetSchemaAsync(request.ConnectionString);
+                var schema = await _schema.GetSchemaAsync(_connectionString);
 
-                // 2. Generate SQL
-                var sql = await _ai.GenerateSqlAsync(schema, request.Prompt);
+                var sql = await _groqService.GenerateSqlAsync(schema, req.Prompt);
 
-                Console.WriteLine("SQL: " + sql);
+                Console.WriteLine("SQL => " + sql);
 
-                // 3. Safety check
                 if (!_safety.IsSafeQuery(sql))
                     return BadRequest("Unsafe SQL");
 
-                // 4. Execute query
-                var dataJson = await _data.ExecuteQueryAsync(request.ConnectionString, sql);
+                if (!_validator.Validate(sql, schema))
+                    return BadRequest("Invalid column name generated");
 
-                // 5. Generate report
-                var reportJson = await _ai.GenerateReportAsync(dataJson, request.Prompt);
+                var data = (await _data.ExecuteQueryAsync(_connectionString, sql)).ToList();
 
-                Console.WriteLine("REPORT: " + reportJson);
-
-                // 6. Safe deserialize
-                try
+                return Ok(new
                 {
-                    var result = JsonSerializer.Deserialize<ReportResult>(reportJson,
-                        new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
-
-                    return Ok(result);
-                }
-                catch
-                {
-                    return Ok(new
-                    {
-                        raw = reportJson,
-                        message = "AI returned invalid JSON - showing raw output"
-                    });
-                }
+                    sql,
+                    count = data.Count,
+                    data
+                });
             }
             catch (Exception ex)
             {
-                return StatusCode(500, ex.Message);
+                return StatusCode(500, new { error = ex.Message });
             }
         }
     }
