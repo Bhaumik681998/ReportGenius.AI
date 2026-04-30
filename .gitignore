@@ -14,6 +14,12 @@ obj/
 *.dll.config
 *.exe.config
 
+
+appsettings.json
+appsettings.Development.json
+appsettings.Production.json
+appsettings.*.json
+
 # Visual Studio
 .vs/
 *.suo
