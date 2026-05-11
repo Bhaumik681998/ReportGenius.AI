@@ -17,10 +17,36 @@ builder.Services.AddScoped<DataService>();
 builder.Services.AddScoped<SqlSafetyService>();
 builder.Services.AddScoped<SchemaService>();
 builder.Services.AddScoped<SqlValidatorService>();
+builder.Services.AddScoped<ColumnMapperService>();
+
+builder.Services.AddScoped<TableMapperService>();
+builder.Services.AddScoped<PromptNormalizerService>();
+builder.Services.AddScoped<SqlJoinFixService>();
+builder.Services.AddScoped<SqlSyntaxFixService>();
+builder.Services.AddScoped<SqlTableValidatorService>();
+builder.Services.AddScoped<DynamicSqlFixService>();
+builder.Services.AddHttpClient<GemmaService>();
+//-----
+
+builder.Services.AddSingleton<MetadataCacheService>();
+
+builder.Services.AddScoped<SemanticMapperService>();
+
+builder.Services.AddScoped<PromptUnderstandingService>();
+
+builder.Services.AddScoped<RelevantSchemaService>();
+
+builder.Services.AddScoped<SqlExecutionService>();
+
+builder.Services.AddHttpClient<AIQueryService>();
+
 
 #endregion
 
 var app = builder.Build();
+var cache = app.Services.GetRequiredService<MetadataCacheService>();
+await cache.LoadAsync();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

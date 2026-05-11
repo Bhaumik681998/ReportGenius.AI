@@ -1,0 +1,1 @@
+SELECT TOP 10 Kishore.KishoreID, Kishore.KishoreName FROM Kishore JOIN KishoreRequest KR ON Kishore.KishoreID = KR.KishoreName WHERE Kishore.Area = 'Aksharvadi' AND KR.AreaCode = 'Surat-1' AND Kishore.Status = 'Active'

@@ -1,7 +1,9 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using ReportGenius.AI.Helper;
 using System.Net.Http.Headers;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace ReportGenius.AI.Service
 {
@@ -21,35 +23,21 @@ namespace ReportGenius.AI.Service
                 new AuthenticationHeaderValue("Bearer", _apiKey);
         }
 
-        public async Task<string> GenerateSqlAsync(string schema, string prompt)
+        private async Task<string> CallGroqAsync(string prompt)
         {
-            var systemPrompt = $@"
-You are a SQL Server expert.
-
-Database Schema:
-{schema}
-
-STRICT RULES:
-- Use ONLY columns from schema
-- DO NOT guess column names
-- Return ONLY SQL query
-- No explanation
-- Only SELECT query
-";
+            var url = "https://api.groq.com/openai/v1/chat/completions";
 
             var body = new
             {
                 model = _model,
                 messages = new[]
                 {
-                    new { role = "system", content = systemPrompt },
                     new { role = "user", content = prompt }
                 },
                 temperature = 0
             };
 
-            var response = await _http.PostAsync(
-                "https://api.groq.com/openai/v1/chat/completions",
+            var response = await _http.PostAsync(url,
                 new StringContent(JsonConvert.SerializeObject(body),
                 Encoding.UTF8, "application/json"));
 
@@ -60,32 +48,60 @@ STRICT RULES:
             if (parsed["error"] != null)
                 throw new Exception(parsed["error"]?["message"]?.ToString());
 
-            var sql = parsed["choices"]?[0]?["message"]?["content"]?.ToString();
+            return parsed["choices"]?[0]?["message"]?["content"]?.ToString();
+        }
 
-            return CleanSql(sql);
+        public async Task<string> GenerateSqlAsync(string schema, string prompt)
+        {
+            var raw = await CallGroqAsync($@"
+You are SQL Server expert.
+
+STRICT RULES:
+- Return ONLY valid SQL
+- SQL MUST be executable without error
+- EACH column MUST be separated by comma
+- WRONG: SELECT Name Age
+- CORRECT: SELECT Name, Age
+- DO NOT miss commas
+- DO NOT write explanation
+- DO NOT write text like 'This query...'
+- OUTPUT must start with SELECT
+
+Schema:
+{schema}
+
+User Request:
+{prompt}
+");
+
+            return CleanSql(raw);
         }
 
         private string CleanSql(string sql)
         {
-            sql = sql.Replace("```sql", "", StringComparison.OrdinalIgnoreCase)
+            if (string.IsNullOrWhiteSpace(sql))
+                return "";
+
+            // remove markdown
+            sql = sql.Replace("```sql", "")
                      .Replace("```", "")
                      .Trim();
 
-            var lower = sql.ToLower();
+            // 🔥 IMPORTANT: Extract SELECT only (ignore text before)
+            var match = Regex.Match(sql, @"(SELECT|WITH)\s+[\s\S]*", RegexOptions.IgnoreCase);
 
-            int selectIndex = lower.IndexOf("select");
-            int withIndex = lower.IndexOf("with");
+            if (!match.Success)
+                return "";
 
-            int start = selectIndex >= 0 ? selectIndex : withIndex;
+            sql = match.Value;
 
-            if (start >= 0)
-                sql = sql.Substring(start);
+            // remove comments
+            sql = Regex.Replace(sql, @"--.*?$", "", RegexOptions.Multiline);
 
-            int semicolon = sql.IndexOf(";");
-            if (semicolon > 0)
-                sql = sql.Substring(0, semicolon);
+            // remove multiple spaces
+            sql = Regex.Replace(sql, @"\s+", " ").Trim();
 
-            return sql.Trim();
+            return sql;
         }
     }
 }

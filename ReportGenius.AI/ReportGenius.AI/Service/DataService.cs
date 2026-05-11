@@ -1,15 +1,13 @@
-﻿namespace ReportGenius.AI.Service
-{
-    using Dapper;
-    using Microsoft.Data.SqlClient;
-    using System.Text.Json;
+﻿using Dapper;
+using Microsoft.Data.SqlClient;
 
-    public class DataService
+public class DataService
+{
+    public async Task<IEnumerable<dynamic>> ExecuteQueryAsync(string connStr, string sql)
     {
-        public async Task<IEnumerable<dynamic>> ExecuteQueryAsync(string conn, string sql)
-        {
-            using var db = new SqlConnection(conn);
-            return await db.QueryAsync(sql);
-        }
+        using var conn = new SqlConnection(connStr);
+        await conn.OpenAsync();
+
+        return await conn.QueryAsync(sql);
     }
 }

@@ -6,21 +6,35 @@ namespace ReportGenius.AI.Service
 {
     public class SchemaService
     {
-        public async Task<string> GetSchemaAsync(string conn)
+        public async Task<string> GetSchemaAsync(string connectionString)
         {
-            using var db = new SqlConnection(conn);
+            using var conn = new SqlConnection(connectionString);
 
-            var tables = await db.QueryAsync<string>(
-                "SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES");
+            var result = await conn.QueryAsync(@"
+        SELECT 
+            t.name AS TableName,
+            c.name AS ColumnName,
+            ty.name AS DataType
+        FROM sys.tables t
+        JOIN sys.columns c ON t.object_id = c.object_id
+        JOIN sys.types ty ON c.user_type_id = ty.user_type_id
+        ORDER BY t.name
+    ");
 
             var sb = new StringBuilder();
 
-            foreach (var t in tables)
-            {
-                var cols = await db.QueryAsync<string>(
-                    $"SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='{t}'");
+            var grouped = result.GroupBy(x => x.TableName);
 
-                sb.AppendLine($"Table: {t} ({string.Join(", ", cols)})");
+            foreach (var table in grouped)
+            {
+                sb.AppendLine($"{table.Key}:");
+
+                foreach (var col in table)
+                {
+                    sb.AppendLine($"  - {col.ColumnName} ({col.DataType})");
+                }
+
+                sb.AppendLine();
             }
 
             return sb.ToString();

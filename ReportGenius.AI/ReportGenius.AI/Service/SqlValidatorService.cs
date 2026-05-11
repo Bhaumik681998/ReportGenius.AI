@@ -4,29 +4,34 @@ namespace ReportGenius.AI.Service
 {
     public class SqlValidatorService
     {
-        public bool Validate(string sql, string schema)
+        public bool IsSafe(string sql)
         {
-            var columns = Extract(schema);
+            if (string.IsNullOrWhiteSpace(sql))
+                return false;
 
-            var words = Regex.Matches(sql, @"\b[a-zA-Z_]+\b")
-                .Select(x => x.Value.ToLower());
-
-            return !words.Any(w => w.EndsWith("id") && !columns.Contains(w));
-        }
-
-        private List<string> Extract(string schema)
-        {
-            var list = new List<string>();
-
-            var matches = Regex.Matches(schema, @"\((.*?)\)");
-
-            foreach (Match m in matches)
+            var blocked = new[]
             {
-                foreach (var col in m.Groups[1].Value.Split(','))
-                    list.Add(col.Trim().ToLower());
+                "DELETE",
+                "UPDATE",
+                "DROP",
+                "TRUNCATE",
+                "ALTER",
+                "INSERT",
+                "EXEC"
+            };
+
+            foreach (var word in blocked)
+            {
+                if (Regex.IsMatch(sql,
+                    $@"\b{word}\b",
+                    RegexOptions.IgnoreCase))
+                {
+                    return false;
+                }
             }
 
-            return list;
+            return sql.StartsWith("SELECT",
+                StringComparison.OrdinalIgnoreCase);
         }
     }
 }
